@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>WordPress.org Login | WordPress.org English</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="max-image-preview:large" />
+    <style id="wp-block-library-inline-css" type="text/css">
+      .has-text-align-justify {
+        text-align: justify;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="dashicons-css"
+      href="https://login.wordpress.org/wp-includes/css/dashicons.min.css?ver=6.5-alpha-57310"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="wporg-normalize-css"
+      href="https://login.wordpress.org/wp-content/themes/pub/wporg-login/stylesheets/normalize.css?ver=6.5-alpha-57310"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="buttons-css"
+      href="https://login.wordpress.org/wp-includes/css/buttons.min.css?ver=6.5-alpha-57310"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="forms-css"
+      href="https://login.wordpress.org/wp-admin/css/forms.min.css?ver=6.5-alpha-57310"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="login-css"
+      href="https://login.wordpress.org/wp-admin/css/login.min.css?ver=6.5-alpha-57310"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="wporg-login-css"
+      href="https://login.wordpress.org/wp-content/themes/pub/wporg-login/stylesheets/login.css?ver=1688359736"
+      type="text/css"
+      media="all"
+    />
+    <meta name="generator" content="WordPress 6.5-alpha-57310" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <style>
+      img#wpstats {
+        display: none;
+      }
+    </style>
+    <link rel="icon" href="https://s.w.org/favicon.ico?2" sizes="32x32" />
+    <link rel="icon" href="https://s.w.org/images/wmark.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://s.w.org/images/wmark.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://s.w.org/images/wmark.png"
+    />
+  </head>
+  <body class="wp-core-ui login js route-root">
+    <div id="login">
+      <h1>
+        <a href="#" tabindex="-1">Powered by WordPress</a>
+      </h1>
+
+      <form
+        name="loginform"
+        id="loginform"
+        action="/wordpress"
+        method="post"
+        data-submit-ready="true"
+      >
+        <p class="intro">
+          Log in to your WordPress.org account to contribute to WordPress, get
+          help in the support forum, or rate and review themes and plugins.
+        </p>
+        <p class="login-username">
+          <label for="user_login">Username or Email Address</label>
+          <input
+            type="text"
+            name="username"
+            id="user_login"
+            class="input"
+            value=""
+            size="20"
+            required="true"
+          />
+        </p>
+        <p class="login-password">
+          <label for="user_pass">Password</label>
+          <span class="wp-pwd" style="display: block">
+            <input
+              type="password"
+              name="password"
+              id="user_pass"
+              class="input password-input"
+              value=""
+              size="20"
+              required="true"
+            />
+            <button
+              type="button"
+              id="wp-hide-pw"
+              class="button button-secondary wp-hide-pw hide-if-no-js"
+              aria-label="Hide password"
+            >
+              <span
+                class="dashicons dashicons-visibility"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </span>
+        </p>
+        <p class="login-remember">
+          <label
+            ><input
+              name="rememberme"
+              type="checkbox"
+              id="rememberme"
+              value="forever"
+            />
+            Remember Me</label
+          >
+        </p>
+        <p class="login-submit">
+          <input type="hidden" name="url" value="https://login.wordpress.org" />
+          <input
+            type="submit"
+            name="wp-submit"
+            id="wp-submit"
+            class="button button-primary"
+            value="Log In"
+          />
+        </p>
+      </form>
+
+      <p id="nav">
+        <a
+          href="https://login.wordpress.org/lostpassword"
+          title="Password Lost and Found"
+          >Lost password?</a
+        >
+        &nbsp; • &nbsp;
+        <a href="https://login.wordpress.org/register" title="Create an account"
+          >Create an account</a
+        >
+      </p>
+
+      <script type="text/javascript">
+        setTimeout(function () {
+          try {
+            var d = document.getElementById('user_login');
+            if (d.value) {
+              d = document.getElementById('user_pass');
+            }
+            d.focus();
+            d.select();
+
+            var h = document.getElementById('wp-hide-pw');
+            h.onclick = function () {
+              var p = document.getElementById('user_pass');
+              if (p.type === 'password') {
+                p.type = 'text';
+                h.ariaLabel = 'Hide password';
+                h.children[0].className = 'dashicons dashicons-hidden';
+              } else {
+                p.type = 'password';
+                h.ariaLabel = 'Show password';
+                h.children[0].className = 'dashicons dashicons-visibility';
+              }
+            };
+          } catch (e) {}
+        }, 200);
+      </script>
+    </div>
+  </body>
+</html>
