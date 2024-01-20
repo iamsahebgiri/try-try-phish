@@ -2,7 +2,12 @@ from flask import Flask, request, render_template, redirect
 from werkzeug.middleware.proxy_fix import ProxyFix
 import csv
 
-app = Flask(__name__, template_folder="sites")
+app = Flask(
+    __name__,
+    template_folder="sites",
+    static_url_path="",
+    static_folder="sites",
+)
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 
 
